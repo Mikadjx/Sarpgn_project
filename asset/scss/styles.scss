@@ -1,0 +1,56 @@
+@import "reset";
+@import "header";
+@import"banniere";
+@import "footer";
+@import "mixins";
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container-about {
+        text-align: center;
+        max-width: 800px;
+        .about p {
+            line-height: 3rem;
+        }
+    }
+
+    .container_cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 5rem 0;
+        width: 70vw;
+        gap: 5rem;
+        .card {
+            height: 375px;
+            width: 250px;
+            background-color: var(--color-card);
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+            .contain {
+                width: 100%;
+                height: 70%;
+                &.img-left {
+                    background-image: url(../images/policeman1.png);
+                    background-size: cover;
+                }
+                &.img-mid {
+                    background-image: url(../images/img_card-mid.png);
+                    background-size: cover;
+                }
+                &.img-right {
+                    background-image: url(../images/img_card_right.png);
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+.stat-paragraphe {
+    text-align: center;
+    color: var(--color-blue);
+    font-size: var(--small-size);
+    padding: 1rem;
+}

@@ -1,0 +1,196 @@
+@import "reset";
+@import "header";
+@import "footer";
+@import "mixins";
+
+.container_picture1 {
+    background-image: url(../images/gendarmerie-3.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    @include flex-jccenter-ai-center
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container .about h1 {
+        font-size: 3em;
+        padding: 50px 20% 20px 20%;
+        color: var(--color-blue);
+        animation: titre ease 3.5s;
+        text-align: center;
+
+        @keyframes titre {
+            0% {
+                opacity: 0;
+                transform: translateY(480px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+                padding: none;
+            }
+
+        }
+    }
+
+    @media (max-width:410px) {
+        .container .about h1 {
+            display: flex;
+            animation: none !important;
+        }
+
+    }
+
+    .container_cards1 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 5rem 0;
+        width: 70vw;
+        gap: 5rem;
+
+        .card {
+            height: 300px;
+            width: 250px;
+            background-color: var(--color-card);
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+
+            .contain_img {
+                background-image: url(../images/icon_shield.png);
+                margin: 20px 75px 40px 75px;
+                height: 30%;
+                width: 40%;
+
+            }
+        }
+    }
+}
+
+.text {
+    text-align: center;
+    margin: 40px 20px 0 20px;
+
+    .text_blue {
+        color: var(--color-blue)
+    }
+}
+
+.container_carousel {
+
+    .cards_carousel {
+        height: 250px;
+        width: 400px;
+        background-color: var(--color-card);
+        box-shadow: var(--box-shadow);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+
+        .slide_info {
+
+            animation: cards_carousel 15s infinite ease-in-out;
+
+            p {
+                text-align: left;
+                padding: 50px 1rem;
+                width: 400px;
+                line-height: 25px;
+
+
+
+                @keyframes cards_carousel {
+
+                    0%,
+                    20% {
+                        transform: translateX(0);
+                    }
+
+                    25%,
+                    45% {
+                        transform: translateX(-100%);
+                    }
+
+                    50%,
+                    70% {
+                        transform: translateX(-200%);
+                    }
+
+                    75%,
+                    100% {
+                        transform: translateX(-300%);
+                    }
+
+                }
+
+
+            }
+        }
+
+    }
+}
+
+#carousel_info {
+    display: flex;
+}
+
+@media (max-width: 400px) {
+    .cards_carousel {
+        width: 300px !important;
+
+        p {
+            width: 300px !important;
+        }
+    }
+
+    .container_confirm {
+        display: none;
+        flex-direction: column !important;
+    }
+}
+
+.container_confirm {
+    display: flex;
+    padding: 50px;
+    justify-content: flex-end;
+    justify-content: space-around;
+
+    width: 100%;
+
+    .btn_infos {
+        background-color: var(--color-orange);
+        width: 150px;
+        height: 30px;
+        margin: 50px;
+        border-radius: 15px;
+        border: none;
+        box-shadow: var(--box-shadow);
+
+    }
+
+    .btn_infos:hover {
+        transform: scale(1.1);
+        transition: ease-out 0.2s;
+    }
+
+    .btn_souscription:hover {
+        transform: scale(1.1);
+        transition: ease-out 0.2s;
+    }
+
+    .btn_souscription {
+        @include button;
+
+    }
+
+    .img_promo {
+        height: 300px;
+        width: 300px;
+
+    }
+}

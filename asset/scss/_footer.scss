@@ -1,0 +1,44 @@
+
+footer {
+    background: var(--color-yellow);
+    margin-top: 5rem;
+    .social {
+        text-align: center;
+        @include flex-jccenter-ai-center;
+        gap: 1rem;
+        padding: 2rem 0;
+        .st3 {
+            fill: var(--color-white);
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        @include small-tablette {
+            flex-direction: column;
+            align-content: center;
+            text-align: center;
+            div{
+                margin: 2rem;
+            }
+        }  
+    }
+    ul li {
+        margin: 1.2rem 0;
+        font-size: var(--small-size);
+
+        a {
+            color: var(--color-white);
+        }
+    }
+    .legale,
+    .legale a {
+        text-align: center;
+        background: var(--color-white);
+        color: var(--color-blue);
+        font-size: var(--small-size);
+        padding: 1rem;
+    }
+}

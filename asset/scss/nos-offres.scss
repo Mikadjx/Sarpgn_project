@@ -1,0 +1,40 @@
+@import "reset";
+@import "header";
+@import "banniere";
+@import "footer";
+@import "mixins";
+
+.main {
+  @include flex-jccenter-ai-center;
+  flex-wrap: wrap;
+  gap: 6rem;
+  margin: 8rem 0;
+  padding: 0 2rem;
+  .card {
+    background-color: var(--color-card);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    transition: 0.5s;
+    width: 300px;
+    &:hover {
+      transform: scale(1.05);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .contain_text {
+    @include flex-jccenter-ai-center;
+    a {
+      margin-top: 1rem;
+      color: black;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: var(--small-size);
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}

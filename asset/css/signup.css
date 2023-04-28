@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+h2 {
+  color: var(--color-blue);
+  font-size: var(--small-size);
+  margin-left: 3rem;
+  text-align: start;
+}
+@media (max-width: 400px) {
+  h2 {
+    display: none;
+  }
+}
+
+h1 {
+  font-size: var(--hight-size);
+  color: var(--color-blue);
+  font-weight: 600;
+  margin: 6rem 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  font-size: var(--medium-size);
+  text-align: center;
+  color: var(--color-blue);
+}
+
+h4 {
+  font-size: var(--normal-size);
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+h5 {
+  font-size: var(--normal-size);
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+p {
+  font-size: var(--smaller-size);
+}
+@media (max-width: 400px) {
+  p {
+    padding: 0 2rem;
+  }
+}
+
+/* HEADER */
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  /* logo Classe pour le svg */
+}
+.nav header {
+  background-color: var(--color-white);
+}
+.nav header .bandeau {
+  background: var(--color-blue);
+  height: 3.5rem;
+}
+.nav header .container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.nav header .container_header .container_logo {
+  display: flex;
+  align-items: center;
+}
+.nav .st0 {
+  fill: var(--color-blue);
+}
+.nav .st1 {
+  fill: var(--color-orange);
+}
+.nav .st2 {
+  fill: var(--color-yellow);
+}
+.nav .nav_menu {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-blue);
+  transform: translateX(110%);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar__link {
+  transform: translateX(101%);
+  transition: all 0.1s ease-in-out;
+}
+.navbar__link > a {
+  display: flex;
+  justify-content: center;
+  margin: 8rem;
+  font-size: var(--small-size);
+  color: var(--color-card);
+  transition: all 0.1s ease-in-out;
+  text-align: center;
+}
+.navbar__link > a:hover {
+  color: var(--color-yellow);
+}
+
+/* Menu Burger */
+.burger {
+  display: block;
+  position: relative;
+  width: 45px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.burger .bar {
+  display: block;
+  width: 45px;
+  border-radius: 3px;
+  height: 4px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: var(--color-blue);
+  position: fixed;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  width: 45px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  background: var(--color-blue);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.bar::before {
+  transform: translateY(-12px);
+}
+
+.bar::after {
+  transform: translateY(12px);
+}
+
+.show-nav .nav_menu {
+  width: 25vw;
+  height: 100vh;
+  transform: translateX(0);
+  position: fixed;
+  z-index: 1;
+}
+.show-nav .nav_menu .navbar__link {
+  transform: translateX(0);
+}
+
+.show-nav .bar {
+  width: 0;
+  background: transparent;
+  z-index: 1;
+}
+
+.show-nav .bar::before {
+  transform: rotate(45deg);
+  background: var(--color-card);
+}
+
+.show-nav .bar::after {
+  transform: rotate(-45deg);
+  background: var(--color-card);
+}
+
+/* Animations text nav burger */
+.show-nav .first {
+  transition: all 0.2s ease-out;
+}
+
+.show-nav .second {
+  transition: all 0.3s ease-out;
+}
+
+.show-nav .third {
+  transition: all 0.4s ease-out;
+}
+
+.show-nav .four {
+  transition: all 0.5s ease-out;
+}
+
+/*Mobile burger */
+@media screen and (max-width: 767.98px) {
+  .navbar__link > a {
+    margin: 5rem 0;
+    font-size: --smalling-size;
+  }
+  .show-nav .nav_menu {
+    width: 60vw;
+    z-index: 1;
+  }
+  .show-nav .bar::before {
+    z-index: 1;
+  }
+  .show-nav .bar::after {
+    z-index: 1;
+  }
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  background: url(../images/banniere.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rem;
+  height: 100%;
+}
+
+.container {
+  background-color: var(--color-forms);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: var(--border-radius-input);
+  box-shadow: var(--box-shadow);
+}
+.container h2 {
+  font-size: var(--normal-size);
+  text-align: center;
+  display: flex;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  color: black;
+}
+.container .first,
+.container .second {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 400px) {
+  .container .first,
+  .container .second {
+    flex-direction: column;
+  }
+}
+.container .first .prenom,
+.container .first .nom,
+.container .first .tel,
+.container .first .date,
+.container .second .prenom,
+.container .second .nom,
+.container .second .tel,
+.container .second .date {
+  width: 40%;
+}
+@media (max-width: 400px) {
+  .container .first .prenom,
+  .container .first .nom,
+  .container .first .tel,
+  .container .first .date,
+  .container .second .prenom,
+  .container .second .nom,
+  .container .second .tel,
+  .container .second .date {
+    width: 100%;
+  }
+}
+.container .formulaire {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+.container .formulaire input {
+  width: 100%;
+  border: none;
+  border-radius: var(--border-radius-input);
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+}
+.container .formulaire input::placeholder {
+  padding-left: 1rem;
+}
+.container .formulaire label {
+  font-size: var(--smaller-size);
+}
+.container input[type=submit] {
+  margin: 2rem 0;
+  width: auto;
+  padding: 1rem 0.5rem;
+  font-size: var(--smaller-size);
+  border: none;
+  border-radius: var(--border-radius-input);
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  padding: 1rem 2rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+/*# sourceMappingURL=signup.css.map */

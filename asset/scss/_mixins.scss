@@ -1,0 +1,187 @@
+//RESPONSIVE
+
+@mixin small-smartphone {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin smartphone {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+
+@mixin small-tablette {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin medium-tablette {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+
+
+@mixin tablette {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+
+@mixin desktop {
+  @media (max-width: 1600px) {}
+}
+
+@mixin large-tablette {
+  @media (max-width: 1440px) {
+
+    @content;
+  }
+}
+
+//ALIGNEMENT
+
+@mixin flex-jccenter-ai-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-jccenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-jcbetween-ai-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-ai-center {
+  display: flex;
+  align-items: center;
+}
+
+//BUTTON
+
+@mixin button {
+  background-color: var(--color-blue);
+  width: 150px;
+  height: 30px;
+  margin: 50px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: var(--box-shadow);
+}
+
+@mixin button {
+  background-color: var(--color-blue);
+  width: 150px;
+  height: 30px;
+  margin: 50px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: var(--box-shadow);
+}
+
+@mixin flex-jccenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-jcbetween-ai-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@mixin flex-jcaround-ai-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-jcevenly-ai-center {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin flex-ai-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-jcaround {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin flex-ai-start {
+  display: flex;
+  align-items: start;
+
+}
+
+@mixin flex-ai-flex-start-jc-center-direction-column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+
+@mixin flex-ai-center-jc-center-direction-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+//BTN
+@mixin btn_forms {
+  padding: 1rem 0.5rem;
+  font-size: var(--smaller-size);
+  border: none;
+  border-radius: var(--border-radius-input);
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+}
+
+@mixin btn_garantie_formule{
+  .btn {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5rem;
+    width: 100%;
+     .form_btn {
+      background-color: transparent;
+      background: var(--color-orange);
+      border: none;
+      border-radius: 3px;
+      text-transform: uppercase;
+      font-weight: var(--bold-weight);
+      cursor: pointer;
+      width: 15rem;
+      padding: 1rem 0;
+    }
+    #btn-2{
+      background-color: var(--color-blue);
+    }
+    @include smartphone {
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 50%;
+      gap: 2rem;
+    }
+   }
+}

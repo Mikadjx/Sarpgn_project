@@ -1,0 +1,114 @@
+@import "reset";
+@import "header";
+@import "mixins";
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  @include tablette {
+    width: auto;
+    height: auto;
+  }
+}
+
+.main {
+  background-image: url(../images/banniere.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+
+  .container {
+    padding-top: 15rem;
+    @include flex-jccenter-ai-center;
+    flex-direction: column;
+
+    .title {
+      h1 {
+        text-align: center;
+        background-color: var(--color-white);
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+      }
+    }
+
+    .container_infos {
+      @include flex-jccenter-ai-center;
+      margin-top: 4rem;
+      box-shadow: var(--box-shadow);
+      background-color: var(--color-white);
+      border-radius: 4px;
+
+      @include tablette {
+        flex-direction: column;
+        width: 90vw;
+      }
+
+      .left {
+        @include tablette {
+          display: flex;
+          width: 100%;
+          justify-content: space-evenly;
+          gap: 1rem;
+          padding: 1rem;
+          flex-wrap: wrap;
+        }
+
+        .postion_info,
+        .email_info,
+        .phone_info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 1.5rem 0;
+
+          @include tablette {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+
+        .position,
+        .email,
+        .phone {
+          display: flex;
+          align-items: center;
+          margin: 3rem;
+          gap: 1.5rem;
+          box-shadow: var(--box-shadow);
+          padding: 1rem;
+
+          @include tablette {
+            flex-direction: column;
+            width: 200px;
+            margin-top: 3rem;
+          }
+        }
+      }
+
+      .right {
+        width: 600px;
+        height: 500px;
+        padding: 1rem;
+        iframe{
+          width: 100%;
+          height: 100%;
+        }
+
+        @include tablette {
+          width: 100%;
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+.st0 {
+  fill: var(--color-white);
+  margin-left: 1rem;
+  background-color: var(--color-blue);
+  padding: 0.5rem;
+  border-radius: 50%;
+}

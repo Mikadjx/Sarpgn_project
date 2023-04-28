@@ -1,0 +1,152 @@
+@import "reset";
+@import "header";
+@import "footer";
+@import "mixins";
+
+//Page formulaire //
+.main {
+  @include flex-ai-center-jc-center-direction-column;
+  .titre {
+    margin-top: 15rem;
+    text-align: center;
+  }
+  table {
+    width: 60vw;
+    @include small-smartphone {
+      width: 90vw;
+    }
+    tr {
+      th {
+        background-color: var(--color-yellow);
+        color: var(--color-white);
+      }
+    }
+    th,
+    td {
+      text-align: center;
+      padding: var(--smalling-size);
+      font-size: var(--medium-size);
+      font-weight: var(--bold-weight);
+      border-radius: var(--smalling-size2);
+      width: calc(100% / 3);
+      background: var(--color-yellow-transparent);
+      @include small-tablette {
+        font-size: var(--smaller-size);
+      }
+      @include tablette {
+        font-size: var(--smalling-size);
+      }
+    }
+    td {
+      height: 10vh;
+    }
+  }
+  .condition {
+    p {
+      text-align: center;
+      font-size: var(--smalling-size);
+      margin: var(--smalling-size2);
+    }
+  }
+}
+.container_card {
+  @include flex-jcevenly-ai-center;
+  width: 100%;
+  flex-direction: column;
+
+  .card_promo {
+    @include flex-jccenter-ai-center;
+    margin-top: var(--hight-size2);
+    text-align: center;
+    padding: var(--medium-size);
+    width: 60vw;
+    padding: 5rem 2rem;
+    border-radius: .8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    @include medium-tablette {
+      width: 60vw;
+    }
+    @include smartphone {
+      width: 85vw;
+    }
+    h4 {
+      color: red;
+      text-decoration: none;
+    }
+  }
+  .card_form {
+    margin-top: var(--hight-size2);
+    width: 60vw;
+    border-radius: .8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    @include smartphone {
+      width: 90vw;
+    }
+  }
+  p {
+    color: var(--color-blue);
+    font-weight: var(--semi-bold);
+    font-size: var(--smaller-size);
+    text-align: center;
+    padding: var(--medium-size);
+  }
+}
+  /*Card Police */
+  .card_promo_police {
+    margin-top: var(--hight-size2);
+    text-align: center;
+    width: 60vw;
+    height: 25vh;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    @include tablette {
+    height:20vh;
+    }
+    @include medium-tablette {
+      height: 20vh;
+    }
+    @include smartphone {
+      width: 85vw;
+      height: 18vh;
+    }
+    h4 {
+      padding: var(--smalling-size2);
+      color: var(--color-black);
+      text-decoration: none;
+    }
+  }
+  /* Card formules  */
+  .container_formules {
+    @include flex-jcevenly-ai-center;
+    width: 100%;
+    margin-top: 7rem;
+    cursor: pointer;
+    @include small-smartphone{
+      flex-direction: column;
+     }
+      .card_1,
+      .card_2 {
+      width: 25rem;
+      border-radius: var(--smalling-size2);
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+      padding: 5rem 1rem;
+      @include small-tablette{
+        width: 15rem;
+      }
+      @include small-smartphone{
+        width: 80vw;
+        margin: 1rem 0;
+       }
+      #formule1,
+      #formule2 {
+        font-size: var(--small-size);
+        width: 100%;
+        height: 100%;
+        @include flex-jccenter-ai-center;
+        text-align: center;
+        color: var(--color-blue);
+        font-weight: var(--bold-weight);
+      }
+    } 
+  }
+  @include btn_garantie_formule;

@@ -1,0 +1,91 @@
+@import "reset";
+@import "header";
+@import "mixins";
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.main {
+    background: url(../images/banniere.png);
+    background-size: cover;
+    background-position: center;
+    @include flex-jccenter-ai-center;
+    padding-top: 15rem;
+    height: 100%;
+}
+
+.container {
+    background-color: var(--color-forms);
+    @include flex-ai-center;
+    flex-direction: column;
+    border-radius: var(--border-radius-input);
+    box-shadow: var(--box-shadow);
+
+    h2 {
+        font-size: var(--normal-size);
+        text-align: center;
+        display: flex;
+        text-transform: uppercase;
+        margin: 2rem 0;
+        color: black;
+    }
+
+    .first,
+    .second {
+        display: flex;
+        justify-content: space-between;
+
+        @include smartphone {
+            flex-direction: column;
+        }
+
+        .prenom,
+        .nom,
+        .tel,
+        .date {
+            width: 40%;
+
+            @include smartphone {
+                width: 100%;
+            }
+        }
+    }
+
+    .formulaire {
+        @include flex-jccenter;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 2rem;
+
+        input {
+            width: 100%;
+            border: none;
+            border-radius: var(--border-radius-input);
+            padding: 1rem 0;
+            margin-top: .5rem;
+
+            &::placeholder {
+                padding-left: 1rem;
+            }
+        }
+
+
+        label {
+            font-size: var(--smaller-size);
+        }
+
+    }
+
+    input[type=submit] {
+        margin: 2rem 0;
+        width: auto;
+        @include btn_forms;
+        padding: 1rem 2rem;
+        background-color: var(--color-blue);
+        color: var(--color-white);
+
+    }
+
+}

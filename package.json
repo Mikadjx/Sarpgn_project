@@ -1,0 +1,22 @@
+{
+  "name": "projectxhtml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w ./asset/scss:./asset/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KilianOlry/projectXhtml.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KilianOlry/projectXhtml/issues"
+  },
+  "homepage": "https://github.com/KilianOlry/projectXhtml#readme",
+  "dependencies": {
+    "sass": "^1.58.1"
+  }
+}
