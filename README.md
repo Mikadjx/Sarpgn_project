@@ -8,7 +8,7 @@ Le site a été réalisé en HTML, SCSS et JavaScript.
 
 Pour plus d'informations, visitez le site web suivant :
 
-[Volt MazeCity](https://volt.mazecity.eu/)
+[Application SARPGN](https://mikadjx.github.io/Sarpgn_project/)
 
 
 
